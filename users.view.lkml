@@ -67,6 +67,7 @@ view: users {
   }
   measure: CountUnique {
     type: count_distinct
+    sql: ${TABLE}.user_email ;;
     drill_fields: [id, user_nicename, display_name, time.count]
   }
 }
