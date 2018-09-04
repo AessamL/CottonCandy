@@ -65,4 +65,8 @@ view: users {
     type: count
     drill_fields: [id, user_nicename, display_name, time.count]
   }
+  measure: CountUnique {
+    type: count_distinct
+    drill_fields: [id, user_nicename, display_name, time.count]
+  }
 }
