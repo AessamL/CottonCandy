@@ -50,6 +50,18 @@ view: users {
     ]
     sql: ${TABLE}.user_registered ;;
   }
+  dimension_group: user_registeredZ {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: FORMAT_DATE('%Y-%m-%d',DATE(${TABLE}.user_registered)) ;;
+  }
   dimension: dateFormated {
     type:date
     sql: FORMAT_DATE('%Y-%m-%d',DATE(${TABLE}.user_registered)) ;;
