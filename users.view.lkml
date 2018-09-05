@@ -50,13 +50,20 @@ view: users {
     ]
     sql: ${TABLE}.user_registered ;;
   }
+  dimension: dateFormated {
+    sql: DATE_FORMAT(${TABLE}.user_registered, "%m%d%Y") ;;
+  }
 
   dimension: user_status {
+    hidden: yes
+    description: "Only 0 Value , No Clear Meaning "
     type: number
     sql: ${TABLE}.user_status ;;
   }
 
   dimension: user_url {
+    hidden: yes
+    description: "Irrelevant"
     type: string
     sql: ${TABLE}.user_url ;;
   }
