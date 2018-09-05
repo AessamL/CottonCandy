@@ -51,6 +51,7 @@ view: users {
     sql: ${TABLE}.user_registered ;;
   }
   dimension: dateFormated {
+    type:date
     sql: FORMAT_DATE('%Y-%m-%d',DATE(${TABLE}.user_registered)) ;;
   }
 
