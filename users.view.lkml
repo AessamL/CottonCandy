@@ -38,6 +38,7 @@ view: users {
   }
 
   dimension_group: user_registered {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -51,6 +52,7 @@ view: users {
     sql: ${TABLE}.user_registered ;;
   }
   dimension_group: user_registeredZ {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -65,7 +67,7 @@ view: users {
   dimension: dateFormated {
     type: date
     sql: FORMAT_TIMESTAMP("%E4Y-%m-%d",${TABLE}.user_registered, "America/Los_Angeles" ) ;;
-    html: {{ rendered_value | date: " %d-%m " }} ;;
+    html: {{ rendered_value | date: "%m -%d " }} ;;
   }
 
   dimension: user_status {
