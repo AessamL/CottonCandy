@@ -63,6 +63,7 @@ view: users {
     sql: FORMAT_TIMESTAMP("%E4Y-%m-%d",${TABLE}.user_registered, "America/Los_Angeles" ) ;;
   }
   dimension: dateFormated {
+    type: date
     sql: FORMAT_TIMESTAMP("%E4Y-%m-%d",${TABLE}.user_registered, "America/Los_Angeles" ) ;;
   }
 
