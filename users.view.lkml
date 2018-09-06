@@ -60,11 +60,12 @@ view: users {
       quarter,
       year
     ]
-    sql: FORMAT_TIMESTAMP("%E4Y-%m-%d",${TABLE}.user_registered, "America/Los_Angeles" ) ;;
+    sql: FORMAT_TIMESTAMP("%c",${TABLE}.user_registered, "America/Los_Angeles" ) ;;
   }
   dimension: dateFormated {
     type: date
     sql: FORMAT_TIMESTAMP("%E4Y-%m-%d",${TABLE}.user_registered, "America/Los_Angeles" ) ;;
+    html: {{ rendered_value | date: "%b %d, %y" }} ;;
   }
 
   dimension: user_status {
