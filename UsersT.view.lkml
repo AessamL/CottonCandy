@@ -1,5 +1,5 @@
 view: userst {
-  sql_table_name: Cotton.Users ;;
+  sql_table_name: Cotton.UsersT ;;
 
   dimension_group: user_registered {
     type: time
