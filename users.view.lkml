@@ -38,7 +38,6 @@ view: users {
   }
 
   dimension_group: user_registered {
-    hidden: yes
     type: time
     timeframes: [
       raw,
