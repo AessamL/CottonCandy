@@ -19,3 +19,4 @@ explore: time {
 }
 
 explore: users {}
+explore: userst {}
