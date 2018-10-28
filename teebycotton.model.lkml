@@ -11,6 +11,7 @@ datagroup: teebycotton_default_datagroup {
 persist_with: teebycotton_default_datagroup
 
 explore: time {
+  hidden: yes
   join: users {
     type: left_outer
     sql_on: ${time.user_id} = ${users.id} ;;
@@ -18,5 +19,9 @@ explore: time {
   }
 }
 
-explore: users {}
-explore: userst {}
+explore: users {
+  hidden: yes
+}
+explore: userst {
+  hidden: yes
+}
